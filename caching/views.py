@@ -8,7 +8,7 @@ import random
 
 def gen_data():
     caches = MyCache.objects.all()
-    return {'caches': caches, 'random': random.random()}
+    return dict(caches=caches, random=random.random())
 
 
 @cache_page(15)
